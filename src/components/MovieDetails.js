@@ -1,16 +1,15 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import StarRating from "./StarRating";
 import Loader from "./Loader";
 
-const KEY = "f84fc31d";
+const KEY = "86499953";
 
-export default 
-function MovieDetails({
+export default function MovieDetails({
   selectedId,
   setSelectedId,
   setWatched,
   clearQuery,
-  watched
+  watched,
 }) {
   const [isLoading, setIsLoading] = useState(false);
   const [movie, setMovie] = useState({});

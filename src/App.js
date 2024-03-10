@@ -12,8 +12,7 @@ import MovieDetails from "./components/MovieDetails";
 import WatchedSummary from "./components/WatchedSummary";
 import WatchedMoviesList from "./components/WatchedMoviesList";
 
-
-const KEY = "f84fc31d";
+const KEY = "86499953";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
