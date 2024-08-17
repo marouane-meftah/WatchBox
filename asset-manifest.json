@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/WatchBox/static/css/main.3d24f52f.css",
-    "main.js": "/WatchBox/static/js/main.3c354370.js",
+    "main.css": "/WatchBox/static/css/main.989152a7.css",
+    "main.js": "/WatchBox/static/js/main.6b61c6ad.js",
     "static/media/logo.svg": "/WatchBox/static/media/logo.01ac5315d5b4dc5e0825739a73cdabd1.svg",
     "index.html": "/WatchBox/index.html",
-    "main.3d24f52f.css.map": "/WatchBox/static/css/main.3d24f52f.css.map",
-    "main.3c354370.js.map": "/WatchBox/static/js/main.3c354370.js.map"
+    "main.989152a7.css.map": "/WatchBox/static/css/main.989152a7.css.map",
+    "main.6b61c6ad.js.map": "/WatchBox/static/js/main.6b61c6ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d24f52f.css",
-    "static/js/main.3c354370.js"
+    "static/css/main.989152a7.css",
+    "static/js/main.6b61c6ad.js"
   ]
 }
