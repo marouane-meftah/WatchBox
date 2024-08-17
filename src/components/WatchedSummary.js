@@ -12,7 +12,7 @@ export default function WatchedSummary({ watched }) {
     watched.length > 0 ? average(watched.map((movie) => movie.runtime)) : 0;
 
   return (
-    <div className="summary marouane">
+    <div className="summary marou">
       <h2>Movies you watched</h2>
       <div>
         <p>
