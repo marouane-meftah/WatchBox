@@ -21,6 +21,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Configure Git
+      run: |
+        git config --global user.name "Marouane Meftah"
+        git config --global user.email "marwan_meftah@hotmail.fr"
+
     - name: Build the app
       run: npm run build
 
