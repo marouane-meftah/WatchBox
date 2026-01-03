@@ -7,7 +7,7 @@ import SearchBox from "./components/SearchBox";
 import Box from "./components/Box";
 import Loader from "./components/Loader";
 import ErrorMessage from "./components/ErrorMessage";
-import MovieList from "./components/MovieList";
+import MoviesList from "./components/MoviesList";
 import MovieDetails from "./components/MovieDetails";
 import WatchedSummary from "./components/WatchedSummary";
 import WatchedMoviesList from "./components/WatchedMoviesList";
@@ -17,11 +17,18 @@ const KEY = "86499953";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
   const [query, setQuery] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [selectedId, setSelectedId] = useState("");
+  const [watched, setWatched] = useState(() => {
+    const stored = localStorage.getItem("watched");
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  useEffect(function(){
+    localStorage.setItem("watched",JSON.stringify(watched))
+  },[watched])
 
   useEffect(
     function () {
@@ -65,7 +72,7 @@ export default function App() {
     },
     [query]
   );
-
+  
   function handleRemoveMovie(id) {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
@@ -82,7 +89,7 @@ export default function App() {
           <SearchBox>
             {isLoading && <Loader />}
             {!isLoading && !error && movies.length > 0 && (
-              <MovieList movies={movies} onSelectMovie={setSelectedId} />
+              <MoviesList movies={movies} onSelectMovie={setSelectedId} />
             )}
             {error && <ErrorMessage message={error} />}
           </SearchBox>
