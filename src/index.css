@@ -76,7 +76,8 @@ body {
   background: #1d2125;
   height: 81vh;
   overflow-y: scroll;
-  width: 52rem;
+  max-width: 52rem;
+  width: 100%;
 }
 .btn-clear {
   position: absolute;
@@ -442,6 +443,9 @@ body {
 }
 .searchInput{
   width: 100% ;
+}
+.details section{
+  padding: 2rem;
 }
 }
 /*
