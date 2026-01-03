@@ -434,9 +434,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+.wlcm {
+    font-size: 15px;
+    font-weight: bold;
+}
 @media screen and (max-width:766px){
   .nav-bar {
   justify-content: center;
+  flex-direction: column-reverse;
 }
 .search{
   width: 100% ;
